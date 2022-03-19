@@ -56,7 +56,7 @@ class ComposeActivity : AppCompatActivity() {
             // Make sure tweetContent is under character count
             if (tweetContent.isEmpty()) {
                 Toast.makeText(this, "Empty tweets not allowed!", Toast.LENGTH_SHORT).show()
-            } else if (tweetContent.length > 140) {
+            } else if (tweetContent.length > 280) {
                 Toast.makeText(this, "Tweet is too long! limit is 140 characters", Toast.LENGTH_SHORT).show()
             } else {
                 client.postTweet(tweet = tweetContent, object: JsonHttpResponseHandler() {
